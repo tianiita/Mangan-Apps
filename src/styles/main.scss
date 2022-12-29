@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,500;1,100;1,700&family=Lato:ital,wght@1,300&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  color: darkslategrey;
+}
+
+h2 {
+  color: darkslategray;
+}
+
+img {
+  display: block;
+}
+
+// skip link
+
+.skip-link {
+  position: absolute;
+  top: -50px;
+  margin: 0 auto;
+  padding: 8px;
+  background-color: saddlebrown;
+  color: beige;
+  z-index: 100;
+  min-height: 50px;
+  text-align: center;
+  font-size: 22px;
+  border: none;
+}
+
+.skip-link:focus {
+  top: 0;
+  text-decoration: underline;
+  outline: 3px dashed lightsalmon;
+}
+
+// header
+
+.header {
+  min-height: 5em;
+  transition: min-height 0.3s;
+  width: 100%;
+  padding: 20px;
+  display: inline-block;
+}
+
+.header_title {
+  font-weight: 700;
+  font-size: 3em;
+  margin: 0.5em 0.25em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header_subtitle {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+
+.header_menu {
+  font-size: 35px;
+  margin: 10px auto;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: rgb(121, 88, 5);
+  min-height: 45px;
+  min-width: 45px;
+  border: none;
+}
+
+// nav
+
+.nav {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: wheat;
+}
+
+.nav_list {
+  width: 100%;
+}
+
+.nav_item {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.nav a {
+  text-decoration: none;
+  color: rgb(107, 87, 53);
+  padding: 1em;
+  display: inline-block;
+}
+
+.nav a:hover {
+  color: rgb(109, 57, 9);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+// jumbotron
+
+.hero {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.hero_image {
+  margin: 0 auto;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+// main
+
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+// content
+.content {
+  padding: 32px;
+}
+
+.caption {
+  text-align: center;
+  font-size: 30px;
+}
+
+//resto
+.restaurants {
+  margin: 32px auto auto;
+  text-align: left;
+}
+
+//daftar resto
+
+.restaurant-list {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  line-height: 0.75cm;
+  background-color: cornsilk;  
+  padding: 16px;
+}
+
+.restaurant-list_header {
+  position: relative;
+}
+
+.restaurant-list_header_picture {
+  width: 100%;
+}
+
+.restaurant-list .restaurant-list_header .restaurant-list_header_rating {
+  position: relative;
+  display: inline-block;
+  padding: 2px 4px;
+  bottom: 50px;
+  right: 10px;
+  border-radius: 0 10px 10px 0;
+  background-color: rgba(112, 64, 2, 0.75);
+  font-weight: bold;
+  font-size: 18px;
+  color: cornsilk;
+  margin-left: 10px;
+}
+
+.restaurant-list_description h2 {
+  font-size: 20px;
+}
+
+.restaurant-list_description a {
+  text-decoration: none;
+  padding: 1em 0;
+  color: rgb(68, 55, 46);
+}
+
+.restaurant-list_description a:hover {
+  text-decoration: underline;
+}
+
+.restaurant-list_description p {
+  font-size: 16px;
+  margin-top: 0.75em;
+  color: rgb(121, 51, 5);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+// query
+
+#query {
+  display: block;
+  width: 100%;
+  min-height: 45px;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2.5px solid dimgray;
+  border-radius: 15px;
+  text-align: center;
+}
+
+// resto detail
+
+.restaurant-name {
+  font-size: 35px;
+  color: rgb(1, 87, 87);
+  text-align: center;
+  text-decoration: underline;
+}
+
+.restaurant-picture {
+  margin: 30px auto 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;  
+  border-radius: 15px;
+}
+
+.detail_restaurant {
+  margin: 0 40px 0;
+  display: grid;
+  grid-row-gap: 20px;
+}
+
+.detail_restaurant h2,
+#reviewResto h2 {
+  font-size: 25px;
+  margin: 15px auto;
+  color: darkolivegreen;
+  text-align: center;
+}
+
+.detail_restaurant h3 {
+  font-size: 20px;
+  margin: 8px auto;
+  color: saddlebrown;
+}
+
+.detail_restaurant p {
+  font-size: 18px;
+  font-weight: normal;
+  color: rgb(48, 32, 21);
+  line-height: 0.75cm;
+}
+
+.restaurant-info, 
+.restaurant-menu, 
+.restaurant-description {
+  grid-template-rows: 1fr;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;  
+  background-color: cornsilk;
+  text-align: center;
+  padding: 10px 50px 25px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.restaurant-menu p {
+  text-transform: capitalize;
+}
+
+// restaurant-reviews
+
+#reviewResto {
+  margin: 0 40px 32px;
+  padding: 16px 80px;
+}
+
+.restaurant-reviews {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.review-custom {
+  display: grid;
+  margin: 20px 0;
+}
+
+.user-review, 
+.customer-review {
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;  
+  background-color: cornsilk;
+  border-radius: 10px;
+  line-height: 0.75cm;
+}
+
+.user-review .caption-review {
+  color: rgb(1, 87, 87);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#userName,
+#userReview {
+  line-height: 44px;
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid tan;
+}
+
+#submitButton {
+  min-height: 45px;
+  width: 110px;
+  text-decoration: none;
+  background-color: rgb(1, 87, 87);
+  color: cornsilk;
+  font-size: 18px;
+  border: 0;
+  border-radius: 25px;
+  margin-bottom: 15px;
+}
+
+.customer-review {
+  padding: 20px 32px;
+}
+
+.customer-review b {
+  color: olive;
+  font-size: 20px;
+}
+
+.customer-review p {
+  font-size: 18px;
+}
+
+// like button
+
+.like {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: sienna;
+  
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 25px;
+  color: blanchedalmond;
+  cursor: pointer;
+}
+
+// footer
+
+footer {
+  background-color: burlywood;
+  padding: 1.25em;
+  width: 100%;
+}
+
+footer p {
+  text-align: center;
+  font-weight: bolder;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color:rgb(80, 38, 9);
+}
