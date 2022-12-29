@@ -41,7 +41,7 @@ const createRestaurantReviewTemplate = (restaurant) => `
     <div class="user-review">
       <form>
         <label for="name-review" class="caption-review">Name</label><br>
-        <input type="text" id="userName" placeholder="Your name"><br><br>
+        <input type="text" id="userName" placeholder="  Your name"><br><br>
         <label for="input-review" class="caption-review">Review</label><br>
         <input type="text" id="userReview" placeholder="  Your review"><br><br>
         <button id="submitButton">Submit</button>
@@ -64,10 +64,9 @@ const createRestaurantListTemplate = (restaurants) => `
   <div class="restaurant-list">
     <div class="restaurant-list_header">
       <picture>
+        <source media="(max-width: 600px)" data-srcset="${CONFIG.BASE_IMAGE_URL_SMALL + restaurants.pictureId}" type="image/jpeg">
         <img class="restaurant-list_header_picture lazyload" alt="${restaurants.name || '-'}"
-          src="${restaurants.pictureId ? CONFIG.BASE_IMAGE_URL_MEDIUM + restaurants.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}"
-          srcset="${CONFIG.BASE_IMAGE_URL_SMALL + restaurants.pictureId} 320w, ${CONFIG.BASE_IMAGE_URL_MEDIUM + restaurants.pictureId} 1080w"
-          sizes="30vw">
+          data-src="${restaurants.pictureId ? CONFIG.BASE_IMAGE_URL_MEDIUM + restaurants.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}">
       </picture>
       <div class="restaurant-list_header_rating">
       <p>✭ <span class="restaurant-list_header_rating_score">${restaurants.rating || '-'}</span></p>
