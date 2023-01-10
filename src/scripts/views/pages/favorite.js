@@ -14,12 +14,12 @@ const Favorite = {
     new FavoriteRestoShowPresenter({ view, favoriteResto: FavoriteRestoIdb });
     new FavoriteRestoSearchPresenter({ view, favoriteResto: FavoriteRestoIdb });
 
-    this._showHeroContent();
+    this._hideHeroContent();
   },
 
-  _showHeroContent() {
+  _hideHeroContent() {
     const heroContent = document.querySelector('hero-content');
-    heroContent.style.display = 'block';
+    heroContent.style.display = 'none';
   },
 };
 

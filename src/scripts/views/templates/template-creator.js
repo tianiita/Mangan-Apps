@@ -41,9 +41,9 @@ const createRestaurantReviewTemplate = (restaurant) => `
     <div class="user-review">
       <form>
         <label for="name-review" class="caption-review">Name</label><br>
-        <input type="text" id="userName" placeholder="  Your name"><br><br>
+        <input type="text" id="userName" placeholder="Your name"><br><br>
         <label for="input-review" class="caption-review">Review</label><br>
-        <input type="text" id="userReview" placeholder="  Your review"><br><br>
+        <input type="text" id="userReview" placeholder="Your review"><br><br>
         <button id="submitButton">Submit</button>
       </form>
     </div>

@@ -1,5 +1,6 @@
 import FavoriteRestoIdb from '../../data/favorite-resto-idb';
 import RestaurantData from '../../data/restaurant-data';
+import CONFIG from '../../globals/config';
 import UrlParser from '../../routes/url-parser';
 import LikeButtonPresenter from '../../utils/like-button-presenter';
 import { createRestaurantDetailTemplate, createRestaurantReviewTemplate } from '../templates/template-creator';
@@ -22,8 +23,6 @@ const Detail = {
     restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
     restaurantReviewContainer.innerHTML = createRestaurantReviewTemplate(restaurant);
 
-    this._reviewForm();
-
     LikeButtonPresenter.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       favoriteResto: FavoriteRestoIdb,
@@ -36,39 +35,43 @@ const Detail = {
       },
     });
 
+    const submitButton = document.querySelector('#submitButton');
+
+    submitButton.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      const userName = document.querySelector('#userName').value;
+      const userReview = document.querySelector('#userReview').value;
+      const customerReview = document.createElement('div');
+  
+      fetch(CONFIG.BASE_URL_REVIEW, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          id: restaurant.id,
+          name: userName,
+          review: userReview,
+        }),
+      })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        customerReview.classList.add('customer-review');
+        customerReview.innerHTML += '';
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+    });
+
     this._hideHeroContent();
   },
 
   _hideHeroContent() {
     const heroContent = document.querySelector('hero-content');
     heroContent.style.display = 'none';
-  },
-
-  _reviewForm() {
-    const submitButton = document.querySelector('#submitButton');
-
-    submitButton.addEventListener('click', (event) => {
-      event.preventDefault();
-      this._submitReview();
-    });
-  },
-
-  _submitReview() {
-    const customerReview = document.createElement('div');
-    const userName = document.querySelector('#userName').value;
-    const userReview = document.querySelector('#userReview').value;
-    const reviewResto = document.querySelector('#reviewResto');
-
-    console.log('Temporary: berhasil menambahkan review');
-
-    customerReview.classList.add('review-custom');
-    customerReview.innerHTML += `
-      <div class="customer-review">
-        <b>${userName}</b>
-        <p>${userReview}</p>
-      </div>
-    `;
-    reviewResto.appendChild(customerReview);
   },
 };
 

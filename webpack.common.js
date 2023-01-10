@@ -92,7 +92,10 @@ module.exports = {
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/index.html'),
     }),
-    new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: false,
+    }),
     new CopyWebpackPlugin({
       patterns: [
         {
