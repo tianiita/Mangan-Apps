@@ -258,16 +258,16 @@ main {
 }
 
 .detail_restaurant h3 {
-  font-size: 20px;
+  font-size: 22px;
   margin: 8px auto;
   color: saddlebrown;
 }
 
 .detail_restaurant p {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: normal;
   color: rgb(48, 32, 21);
-  line-height: 0.75cm;
+  line-height: 0.8cm;
 }
 
 .restaurant-info, 
@@ -277,7 +277,7 @@ main {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;  
   background-color: cornsilk;
   text-align: center;
-  padding: 10px 50px 25px;
+  padding: 10px 80px 25px;
   border-radius: 10px;
   width: 100%;
 }
@@ -308,13 +308,12 @@ main {
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;  
   background-color: cornsilk;
   border-radius: 10px;
-  line-height: 0.75cm;
 }
 
 .user-review .caption-review {
   color: rgb(1, 87, 87);
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 #userName,
@@ -342,15 +341,17 @@ main {
 
 .customer-review {
   padding: 20px 32px;
+  line-height: 0.8cm;
 }
 
 .customer-review b {
   color: olive;
-  font-size: 20px;
+  font-size: 22px;
+  margin: 10px auto;
 }
 
 .customer-review p {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 // like button

@@ -26,7 +26,7 @@
     }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 399px) {
     .nav {
         font-size: smaller;
     }
@@ -90,7 +90,26 @@
 
     .detail_restaurant,
     #reviewResto {
-        padding: 16px 22px;
+        padding: 16px 18px;
+    }
+
+    .restaurant-info, 
+    .restaurant-menu, 
+    .restaurant-description {
+        padding: 10px 40px 25px;
+    }
+
+    .detail_restaurant h3,
+    .user-review .caption-review,
+    .customer-review b {
+        font-size: 18px;
+    }
+
+    .detail_restaurant p,
+    #userName,
+    #userReview,
+    .customer-review p {
+        font-size: 16px;
     }
 
     footer {
@@ -115,7 +134,7 @@
 
     .detail_restaurant,
     #reviewResto {
-        padding: 16px auto;
+        padding: 16px 50px;
     }
 }
 
@@ -195,8 +214,14 @@
 }
 
 @media screen and (min-width: 1200px) {
+    .nav a,
+    .restaurant-list_description h2,
+    .restaurant-list_description p {
+        font-size: larger;        
+    }
+
     .detail_restaurant,
     #reviewResto {
-        padding: 16px 120px;
+        padding: 16px 175px;
     }
 }

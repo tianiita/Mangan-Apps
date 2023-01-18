@@ -43,6 +43,7 @@ const Detail = {
       const userName = document.querySelector('#userName').value;
       const userReview = document.querySelector('#userReview').value;
       const customerReview = document.createElement('div');
+      const containerReview = document.querySelector('.restaurant-reviews');
   
       fetch(CONFIG.BASE_URL_REVIEW, {
         method: 'POST',
@@ -59,7 +60,12 @@ const Detail = {
       .then((data) => {
         console.log(data);
         customerReview.classList.add('customer-review');
-        customerReview.innerHTML += '';
+        customerReview.innerHTML += `
+          <b>${userName}</b>
+          <p>${new Date().toDateString()}</p>
+          <p>${userReview}</p>
+        `;
+        containerReview.appendChild(customerReview);
       })
       .catch((error) => {
         console.error(error);
